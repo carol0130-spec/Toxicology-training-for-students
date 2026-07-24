@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毒物中心醫學生志工訓練網站</title>
+    <style>
+        :root {
+            --primary-color: #7a8d9a; /* 莫蘭迪藍 */
+            --secondary-color: #9aab93; /* 莫蘭迪綠 */
+            --bg-color: #f8f9f7;
+            --text-color: #333333;
+            --border-color: #d1d1d1;
+            --accent-color: #b0a496; /* 莫蘭迪灰褐 */
+        }
+
+        body {
+            font-family: 'Cambria', 'Microsoft JhengHei', serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+        }
+
+        /* 側邊導覽列 */
+        nav {
+            width: 280px;
+            height: 100vh;
+            background-color: #ecebe4;
+            border-right: 1px solid var(--border-color);
+            position: fixed;
+            overflow-y: auto;
+            padding: 20px 0;
+        }
+
+        nav h2 {
+            padding: 0 20px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 主要內容區 */
+        main {
+            margin-left: 280px;
+            padding: 40px 60px;
+            max-width: 1000px;
+        }
+
+        header {
+            border-bottom: 3px solid #333;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #222;
+        }
+
+        .author-info {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background-color: #fdfaf4;
+            border: 1px solid var(--accent-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .case-entry {
+            border-bottom: 1px dashed var(--border-color);
+            padding: 15px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* 響應式優化 */
+        @media (max-width: 768px) {
+            nav { width: 100%; height: auto; position: relative; }
+            main { margin-left: 0; padding: 20px; }
+            body { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2>目錄導航</h2>
+    <ul>
+        <li><a href="#sec01">01 訓練規則</a></li>
+        <li><a href="#sec02">02 個案列表範例</a></li>
+        <li><a href="#sec03">03 中毒處置基本原則&檢驗</a></li>
+        <li><a href="#sec04">04 特殊臨床症狀</a></li>
+        <li><a href="#sec05">05 農藥</a></li>
+        <li><a href="#sec06">06 環境用藥</a></li>
+        <li><a href="#sec07">07 藥物</a></li>
+        <li><a href="#sec08">08 濫用物質(毒品)</a></li>
+        <li><a href="#sec09">09 化工物質</a></li>
+    </ul>
+</nav>
+
+<main>
+    <header>
+        <h1>毒物中心醫學生志工訓練 快速導覽</h1>
+        <div class="author-info">
+            作者資訊：臺北榮總毒藥物防治諮詢中心-李凱如 專責諮詢師 Version 2.0_20260724
+ 詳細請參閱雲端資料夾：<a href="https://reurl.cc/xeEDle" target="_blank" rel="noopener noreferrer">點擊這裡前往網站</a>
+        </div>
+    </header>
+
+    <!-- 01 訓練規則 -->
+    <section id="sec01">
+        <h2>01 訓練規則</h2>
+        <h3>值班與訓練規範 </h3>
+        <ul>
+            <li>總訓練時數為200小時。總值班數為17班，全員值班完畢後頒發結業證書。</li>
+            <li>白班：08:00-16:00；小夜：16:00-22:00；大夜：22:00-隔日08:00。</li>
+            <li>值班期間所有個案皆須製作「個案列表」上傳。</li>
+            <li>查詢資料庫以 <strong>Micromedex</strong> 為主，其他醫學資料庫 (如:Uptodate 等) 為輔。</li>
+        </ul>
+        <h3>獨立值班與交班原則 </h3>
+        <div class="highlight-box">
+            <strong>交班原則：</strong> (1) 複雜、嚴重個案，未來8-12小時內病情可能快速變化者。(2) 特殊案件（社會矚目、3人以上集體中毒）。
+        </div>
+          <div class="highlight-box">
+            <strong> 獨立值班後 call out 總醫師原則：</strong>(1) 見「交班原則 (1) 」，(2) 生物毒素案件，尤其蜂螫、蛇咬傷，(3) 中草藥案件，(4) 無法肯定評估及建議是否合適之案件
+    </section>
+
+    <!-- 02 個案列表範例 -->
+    <section id="sec02">
+        <h2>02 個案列表範例</h2>
+        <div class="case-entry">
+            <strong> 年齡/性別/體重/中毒物質/中毒原因/案情敘述/處置建議；詳請參閱雲端資料夾: https://reurl.cc/xeEDle
+    </section>
+
+    <!-- 03 中毒處置基本原則&毒藥物檢驗 -->
+    <section id="sec03">
+        <h2>03 中毒處置基本原則&毒藥物檢驗</h2>
+        <h3>處置步驟 </h3>
+        <table>
+            <tr><th>步驟</th><th>原則</th><th>重點</th><th>執行方式</th></tr>
+            <tr><td>STEP 1</td><td>Stabilization</td><td>穩定病人</td><td>ABCs (呼吸、循環、意識)± ACLS。積極生命支持</td></tr>
+            <tr><td>STEP 2</td><td>Diagnosis</td><td>鑑別診斷</td><td>病史、暴露物質(廠牌)、暴露量、途徑、理學檢查、毒性症狀</td></tr>
+            <tr><td>STEP 3</td><td>Treatment</td><td>清除與治療</td><td>不可催吐。評估洗胃、活性碳(多次)、血液淨化或解毒劑</td></tr>
+        </table>
+        <h3>檢驗重點 </h3>
+        <ul>
+            <li><strong>並非所有毒物皆可直接檢測，臨床需有合理懷疑；任何檢驗都不要延遲病人的救治。</strong> </li>
+            <li>質譜法是公認的黃金檢驗方法，但耗時較長。 </li>
+            <li><strong>部分治療會干擾毒物檢驗。例如：氰化物中毒：</strong> 使用 Hydroxocobalamin 前務必先採集血、尿檢體，以免干擾數據。 </li>
+        </ul>
+    </section>
+
+    <!-- 04 毒藥物導致的(特殊)臨床症狀 -->
+    <section id="sec04">
+        <h2>04 毒藥物導致的(特殊)臨床症狀</h2>
+        <h3>低血鉀 (Potassium Channel Modulator)</h3>
+        <ul>
+            <li><strong>β-2 作用劑/胰島素：</strong> 使鉀離子進入細胞內，補鉀時需小心反彈性高血鉀。</li>
+            <li><strong>可溶鋇鹽：</strong> 抑制鉀離子通道，早期可使用口服硫酸鎂沉澱鋇鹽。</li>
+        </ul>
+        <h3>變性血紅素血症 </h3>
+        <p>症狀：發紺但 PaO2 正常、血液呈現巧克力色。</p>
+<p>治療：甲烯藍 (Methylene blue) 1-2mg/kg (Max<7mg/kg)。</p>
+        <h3>高乳酸血症 </h3>
+        <p>B型（非缺氧相關）：粒線體功能受抑制（如氰化物、克凡派、甲醇、乙二醇）。</p>
+    </section>
+
+    <!-- 05 農藥 -->
+    <section id="sec05">
+        <h2>05 農藥</h2>
+        <h3>有機磷/胺基甲酸鹽 </h3>
+<p>記憶口訣 <strong><span style="color: rgb(192, 0, 0);">D</span><span style="color: rgb(192, 0, 0);">U</span><span style="color: rgb(192, 0, 0);">M</span><span style="color: rgb(192, 0, 0);">B</span><span style="color: rgb(192, 0, 0);">E</span><span style="color: rgb(192, 0, 0);">L</span><span style="color: rgb(192, 0, 0);">S</span></strong>: <span style="color: rgb(192, 0, 0);">D</span>iarrhea, <span style="color: rgb(192, 0, 0);">U</span>rination, <span style="color: rgb(192, 0, 0);">M</span>iosis, <span style="color: rgb(192, 0, 0);">B</span>radycardia, <span style="color: rgb(192, 0, 0);">E</span>mesis, <span style="color: rgb(192, 0, 0);">L</span>acrimation, <span style="color: rgb(192, 0, 0);">S</span>alivation。</p>
+
+               <p>治療：</p>
+<li> 2-PAM：AchE reactivator，老化前趕快用(48小時內)
+<li> Atropine：Muscarinic antagonist，打到氣管分泌物乾)</p>
+        <h3>★ 克凡派 (Chlorfenapyr) </h3>
+       
+            <strong>危險警訊：</strong> 粒線體抑制劑，初期可能無症狀，7-14 天後可能突發高燒、意識改變、全身僵硬痙攣，致死率極高。
+        </div>
+    </section>
+
+    <!-- 06 環境用藥 -->
+    <section id="sec06">
+        <h2>06 環境用藥</h2>
+        <h3>殺鼠劑 (長效型抗凝血劑) </h3>
+        <p>機轉：抑制 Vit K epoxide reductase。</p>
+<p>治療：無症狀不要先給 Vit K1。若 PT/INR 超過正常值 1.5 倍需啟動治療。</p>
+        <h3>除蟲菊酯 </h3>
+        <p>市售殺蟲劑最常見。</p>
+<p>對人體屬低毒性，通常僅有過敏或黏膜刺激症狀。</p>
+    </section>
+
+    <!-- 07 藥物 -->
+    <section id="sec07">
+        <h2>07 藥物</h2>
+        <h3>一藥致命 (One Pill Can Kill) </h3>
+        <p>幼兒誤食一顆即可能致命：TCA、鴉片類、鈣離子阻斷劑、強心劑 (Digoxin)、降血糖藥 (SU)。</p>
+        <h3>普拿疼 (Acetaminophen) </h3>
+<p>市售成藥最常見。</p>
+        <p>治療：暴露後 8-10 小時內儘早使用 IV N-acetylcysteine (NAC)。</p>
+    </section>
+
+    <!-- 08 濫用物質(毒品) -->
+    <section id="sec08">
+        <h2>08 濫用物質 NPS (毒品)</h2>
+        <h3>新興濫用藥物監測 </h3>
+        <p>臨床懷疑即可由急診免費送驗尿液。初篩使用免疫分析法 (EIA)，確認診斷需依賴質譜分析。</p>
+        <table>
+            <tr><th>類型</th><th>受器/機轉</th><th>常見品項</th></tr>
+            <tr><td>興奮劑</td><td>Dopamine releaser</td><td>安非他命、海洛因</td></tr>
+            <tr><td>鎮靜劑</td><td>GABA/Opioid</td><td>BZD(e.g., FM2)、海洛因、嗎啡</td></tr>
+            <tr><td>致幻劑</td><td>Serotonin/NMDA</td><td>LSD、K他命、大麻、依托咪酯</td></tr>
+        </table>
+    </section>
+
+    <!-- 09 化工物質 -->
+    <section id="sec09">
+        <h2>09 化工物質</h2>
+        <h3>腐蝕性物質 </h3>
+        <p>強酸（蛋白質凝固）、強鹼（皂化反應/液化性壞死）。<strong>不可洗胃或給活性碳。</strong></p>
+        <h3>氫氟酸 (HF) </h3>
+        <p>弱酸但具強穿透力，引起低血鈣/低血鎂心臟毒性。治療：塗抹或浸泡葡萄糖酸鈣 (Calcium gluconate)。</p>
+        <h3>有毒醇類</h3>
+        <p>甲醇/乙二醇治療：ADH 抑制劑 (Fomepizole/Ethanol) 與血液透析。可利用 <a href="http://link.pcc-vghtpe.tw/methanol" target="_blank">透析治療計算機</a> 評估時間。</p>
+    </section>
+
+    <footer>
+        &copy; 2026 臺北榮總毒藥物防治諮詢中心 | 專業訓練專用資料
+    </footer>
+</main>
+
+<script>
+    // 平滑滾動功能
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
